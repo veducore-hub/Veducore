@@ -164,6 +164,11 @@ header.sc{box-shadow:0 8px 24px -18px rgba(15,27,51,.5)}
   height:64px;
   border-bottom:none;
   flex-shrink:0;
+  position:sticky;
+  top:0;
+  background:#ffffff;
+  z-index:10;
+  box-sizing:border-box;
 }
 .mob-nav-links{
   flex:1;
@@ -176,11 +181,12 @@ header.sc{box-shadow:0 8px 24px -18px rgba(15,27,51,.5)}
 }
 .mob-nav-close{
   width:40px;height:40px;
-  display:flex;align-items:center;justify-content:center;
+  display:flex!important;align-items:center;justify-content:center;
   background:none;border:none;cursor:pointer;
   font-size:24px;color:var(--ink);
   border-radius:50%;
   transition:background .2s;
+  flex-shrink:0;
 }
 .mob-nav-close:hover{background:var(--card)}
 .mob-nav.open{display:flex}
@@ -195,11 +201,17 @@ header.sc{box-shadow:0 8px 24px -18px rgba(15,27,51,.5)}
   transition:color .2s;
   letter-spacing:-.01em;
 }
-.mob-nav a:not(.btn):hover,.mob-nav a:not(.btn):active{color:var(--brand)}
-.mob-nav a.btn{
-  color:#fff!important;
-  white-space:nowrap;
+/* Logo link inside nav-bar should not stretch */
+.mob-nav .mob-nav-bar a.logo{
+  width:auto;
+  padding:0;
+  display:flex;
 }
+.mob-nav a:not(.btn):hover,.mob-nav a:not(.btn):active{color:var(--brand)}
+.mob-nav a.btn{color:#fff!important;white-space:nowrap}
+/* Hamburger — hide when drawer is open */
+.ham.open{display:none!important}
+
 
 /* ── Buttons ───────────────────────────────── */
 .btn{
@@ -299,8 +311,21 @@ header.sc{box-shadow:0 8px 24px -18px rgba(15,27,51,.5)}
   }
   .ob-static .ob-card{position:static;width:100%}
 }
+@media(max-width:640px){
+  .ob-static{
+    grid-template-columns:1fr!important;
+    max-width:340px;
+    margin-inline:auto;
+  }
+  .ob-static .ob-card{
+    width:100%!important;
+    grid-column:auto!important;
+    max-width:100%!important;
+    margin-inline:0!important;
+  }
+}
 @media(max-width:520px){
-  .ob-static{grid-template-columns:1fr}
+  .ob-static{grid-template-columns:1fr;max-width:320px;margin-inline:auto}
 }
 
 /* ── Marquee (clients) ─────────────────────── */
@@ -590,7 +615,19 @@ td:nth-child(2){color:var(--c3)}td:nth-child(3){color:var(--c1)}td:nth-child(4){
     margin-inline:auto;
   }
 }
-@media(max-width:420px){.tms{grid-template-columns:1fr}}
+/* Mobile: 1-col stacked, centered */
+@media(max-width:640px){
+  .tms{
+    grid-template-columns:1fr!important;
+    max-width:340px;
+    margin-inline:auto;
+  }
+  .tms>*:last-child:nth-child(odd){
+    grid-column:auto!important;
+    width:100%!important;
+    margin-inline:0!important;
+  }
+}
 
 /* ── Press logos ───────────────────────────── */
 .prs{display:flex;gap:14px;flex-wrap:wrap;justify-content:center}
@@ -638,6 +675,14 @@ footer a:hover{color:var(--brand)}
   .soc{justify-content:center}
   footer h5{text-align:center}
   footer a{text-align:center}
+  /* Keep icon+text links aligned properly */
+  a[href^="tel:"],a[href^="mailto:"]{
+    display:inline-flex!important;
+    align-items:center!important;
+    justify-content:flex-start!important;
+    gap:7px!important;
+    text-align:left!important;
+  }
 
   /* Two-col: Quick Links | Legal + Get in touch */
   .footer-bottom-cols{
@@ -706,11 +751,16 @@ footer a:hover{color:var(--brand)}
 @media(max-width:640px){
   .hero h1{font-size:clamp(28px,8vw,42px)}
   .hero p{font-size:15px}
-  .ob-static{grid-template-columns:repeat(2,1fr)}
-  .ob-static .ob-card:last-child:nth-child(odd){
-    grid-column:1/-1;
-    max-width:calc(50% - 6px);
+  .ob-static{
+    grid-template-columns:1fr!important;
+    max-width:340px;
     margin-inline:auto;
+  }
+  .ob-static .ob-card{
+    width:100%!important;
+    grid-column:auto!important;
+    max-width:100%!important;
+    margin-inline:0!important;
   }
   .cta{padding:28px 18px}
   .cta h2{font-size:clamp(22px,6vw,32px)}
@@ -803,7 +853,7 @@ img,svg,video{max-width:100%;height:auto}
       <a href="#about" onclick="closeMob()">About</a>
       <a href="#plans" onclick="closeMob()">Packages</a>
       <a href="#contact" onclick="closeMob()">Contact</a>
-      <a href="#contact" class="btn" onclick="closeMob()" style="margin-top:32px;padding:15px 48px;font-size:16px;border-radius:14px;">Book a demo</a>
+      <a href="#contact" class="btn" onclick="closeMob()" style="margin-top:24px;padding:12px 32px;font-size:14px;border-radius:10px;width:auto;">Book a demo</a>
     </div>
   </nav>
 </header>
@@ -1331,12 +1381,22 @@ function closeMob(){
   mobNav.classList.remove('open');
   hamBtn.setAttribute('aria-expanded','false');
   document.body.style.overflow = '';
+  document.body.style.position = '';
+  document.body.style.width = '';
 }
 hamBtn.addEventListener('click', function(){
   var open = mobNav.classList.toggle('open');
   hamBtn.classList.toggle('open', open);
   hamBtn.setAttribute('aria-expanded', open);
-  document.body.style.overflow = open ? 'hidden' : '';
+  if(open){
+    document.body.style.overflow = 'hidden';
+    document.body.style.position = 'fixed';
+    document.body.style.width = '100%';
+  } else {
+    document.body.style.overflow = '';
+    document.body.style.position = '';
+    document.body.style.width = '';
+  }
 });
 
 // ── Feature slider — removed (auto-marquee now) ──────────────
