@@ -3,7 +3,63 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Veducore – LMS & ERP for Schools, Colleges and Coaching Institutes</title>
+
+<!-- ── Primary SEO ──────────────────────────────────────── -->
+<title>Veducore – School ERP & LMS Platform for Institutes, Colleges & Coaching</title>
+<meta name="description" content="Veducore is an all-in-one School OS — LMS, ERP, live classes, online tests, mobile app and growth tools for schools, colleges and coaching institutes in India. 100% white-label. Book a free demo today.">
+<meta name="keywords" content="school ERP software, LMS for schools, learning management system India, school management software, coaching institute software, online class platform, student management system, school app, fee management software, attendance management, online exam software, white label LMS, Veducore, school ERP India, edtech platform India">
+<meta name="author" content="Veducore">
+<meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+<link rel="canonical" href="https://www.veducore.in/">
+
+<!-- ── Open Graph (Facebook / WhatsApp / LinkedIn) ──────── -->
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://www.veducore.in/">
+<meta property="og:site_name" content="Veducore">
+<meta property="og:title" content="Veducore – School ERP & LMS Platform for Institutes, Colleges & Coaching">
+<meta property="og:description" content="All-in-one School OS — ERP, LMS, live classes, online tests and mobile app. Built for schools, colleges and coaching institutes in India. 100% white-label. Book a free demo.">
+<meta property="og:image" content="https://www.veducore.in/image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:locale" content="en_IN">
+
+<!-- ── Twitter Card ──────────────────────────────────────── -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@veducore">
+<meta name="twitter:title" content="Veducore – School ERP & LMS Platform">
+<meta name="twitter:description" content="All-in-one School OS for schools, colleges and coaching institutes in India. ERP, LMS, live classes, online tests & mobile app.">
+<meta name="twitter:image" content="https://www.veducore.in/image.png">
+
+<!-- ── Structured Data (JSON-LD) ────────────────────────── -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "Veducore",
+  "url": "https://www.veducore.in",
+  "logo": "https://www.veducore.in/image.png",
+  "description": "All-in-one School OS — LMS, ERP, live classes, online tests and mobile app for schools, colleges and coaching institutes in India.",
+  "applicationCategory": "EducationalApplication",
+  "operatingSystem": "Web, Android, iOS",
+  "offers": {
+    "@type": "AggregateOffer",
+    "priceCurrency": "INR",
+    "offerCount": "3"
+  },
+  "contactPoint": {
+    "@type": "ContactPoint",
+    "telephone": "+91-63887-95644",
+    "contactType": "sales",
+    "email": "veducore@gmail.com",
+    "areaServed": "IN",
+    "availableLanguage": ["English", "Hindi"]
+  },
+  "sameAs": [
+    "https://www.veducore.in"
+  ]
+}
+</script>
+
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
@@ -46,7 +102,7 @@ section.tight{padding:60px 0}
 
 /* ── Header / Nav ──────────────────────────── */
 header{
-  position:sticky;top:env(safe-area-inset-top,0px);z-index:100;
+  position:sticky;top:env(safe-area-inset-top,0px);z-index:160;
   background:color-mix(in srgb,var(--bg) 90%,transparent);
   backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);
   border-bottom:1px solid var(--line);transition:box-shadow .3s
@@ -54,7 +110,7 @@ header{
 header.sc{box-shadow:0 8px 24px -18px rgba(15,27,51,.5)}
 .nav{display:flex;align-items:center;justify-content:space-between;height:68px;gap:16px}
 .logo{display:flex;align-items:center;gap:10px;font-size:21px;font-weight:700;color:var(--ink);flex-shrink:0}
-.logo img{width:36px;height:36px;border-radius:50%;object-fit:cover}
+.logo img{height:38px;width:auto;display:block}
 
 /* Desktop nav */
 .nav-links{display:flex;gap:24px;list-style:none;font-size:14px;font-weight:500;color:var(--mute)}
@@ -72,25 +128,78 @@ header.sc{box-shadow:0 8px 24px -18px rgba(15,27,51,.5)}
 
 /* Hamburger */
 .ham{display:none;flex-direction:column;justify-content:space-between;
-  width:28px;height:20px;background:none;border:none;padding:0;cursor:pointer;z-index:110}
-.ham span{display:block;height:2px;border-radius:2px;background:var(--ink);
-  transition:transform .3s,opacity .3s,width .3s}
-.ham span:last-child{width:70%}
-.ham.open span:first-child{transform:translateY(9px) rotate(45deg)}
-.ham.open span:nth-child(2){opacity:0}
-.ham.open span:last-child{width:100%;transform:translateY(-9px) rotate(-45deg)}
+  width:32px;height:22px;background:none;border:none;padding:0;cursor:pointer;z-index:200;position:relative}
+.ham span{display:block;height:2.5px;border-radius:3px;background:var(--ink);
+  transition:transform .35s cubic-bezier(.4,0,.2,1),opacity .25s,width .3s}
+.ham span:last-child{width:65%;margin-left:auto}
+.ham.open span:first-child{transform:translateY(9.75px) rotate(45deg);width:100%}
+.ham.open span:nth-child(2){opacity:0;transform:scaleX(0)}
+.ham.open span:last-child{width:100%;transform:translateY(-9.75px) rotate(-45deg)}
 
-/* Mobile drawer */
+/* Mobile drawer — full screen overlay */
 .mob-nav{
-  display:none;position:fixed;inset:0;top:68px;background:var(--bg);
-  z-index:99;padding:24px 20px;flex-direction:column;gap:6px;
-  border-top:1px solid var(--line);overflow-y:auto;
+  display:none;
+  position:fixed;
+  top:0;left:0;right:0;bottom:0;
+  width:100%;
+  height:100%;
+  min-height:100vh;
+  min-height:100dvh;
+  background:#ffffff;
+  z-index:155;
+  flex-direction:column;
+  justify-content:flex-start;
+  align-items:stretch;
+  gap:0;
+  padding:0;
+  overflow-y:auto;
+  -webkit-overflow-scrolling:touch;
 }
+.mob-nav-bar{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  width:100%;
+  padding:0 20px;
+  height:64px;
+  border-bottom:none;
+  flex-shrink:0;
+}
+.mob-nav-links{
+  flex:1;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+  gap:4px;
+  padding-bottom:40px;
+}
+.mob-nav-close{
+  width:40px;height:40px;
+  display:flex;align-items:center;justify-content:center;
+  background:none;border:none;cursor:pointer;
+  font-size:24px;color:var(--ink);
+  border-radius:50%;
+  transition:background .2s;
+}
+.mob-nav-close:hover{background:var(--card)}
 .mob-nav.open{display:flex}
-.mob-nav a{padding:14px 16px;border-radius:12px;font-size:16px;font-weight:500;
-  color:var(--ink);transition:background .2s}
-.mob-nav a:hover,.mob-nav a:active{background:var(--soft);color:var(--brand)}
-.mob-nav .btn{margin-top:8px;text-align:center;padding:14px}
+.mob-nav a{
+  display:block;
+  width:100%;
+  padding:18px 24px;
+  text-align:center;
+  font-size:22px;font-weight:700;
+  color:var(--ink);
+  border:none;
+  transition:color .2s;
+  letter-spacing:-.01em;
+}
+.mob-nav a:not(.btn):hover,.mob-nav a:not(.btn):active{color:var(--brand)}
+.mob-nav a.btn{
+  color:#fff!important;
+  white-space:nowrap;
+}
 
 /* ── Buttons ───────────────────────────────── */
 .btn{
@@ -204,6 +313,21 @@ header.sc{box-shadow:0 8px 24px -18px rgba(15,27,51,.5)}
   transition:border-color .2s,color .2s}
 .lg:hover{border-color:var(--brand);color:var(--brand)}
 
+/* ── Feature Marquee ───────────────────────── */
+.feat-mq-wrap{overflow:hidden;padding:28px 0;background:var(--soft);border-block:1px solid var(--line)}
+.feat-mq-track{display:flex;gap:0;width:max-content}
+.feat-mq-track.fwd{animation:fmqFwd 28s linear infinite}
+.feat-mq-track.rev{animation:fmqRev 32s linear infinite}
+@keyframes fmqFwd{to{transform:translateX(-50%)}}
+@keyframes fmqRev{from{transform:translateX(-50%)}to{transform:translateX(0)}}
+.feat-mq-wrap:hover .feat-mq-track{animation-play-state:paused}
+.fmi{display:inline-flex;align-items:center;gap:10px;padding:10px 24px;
+  margin:0 8px;border-radius:50px;background:#fff;border:1px solid var(--line);
+  font-size:14px;font-weight:600;color:var(--ink);white-space:nowrap;
+  box-shadow:0 2px 8px -4px rgba(29,78,216,.1);transition:border-color .2s,color .2s}
+.fmi:hover{border-color:var(--brand);color:var(--brand)}
+.fmi svg{flex-shrink:0}
+
 /* ── Product Tour ──────────────────────────── */
 .tour{
   max-width:820px;margin:0 auto;aspect-ratio:16/8;border-radius:18px;
@@ -222,30 +346,30 @@ header.sc{box-shadow:0 8px 24px -18px rgba(15,27,51,.5)}
   100%{box-shadow:0 0 0 26px rgba(255,255,255,0)}
 }
 
-/* ── Features carousel ─────────────────────── */
+/* ── Features auto-marquee ─────────────────── */
 .hrow{display:flex;justify-content:space-between;align-items:flex-end;gap:20px;flex-wrap:wrap}
-.arrows{display:flex;gap:8px;margin-bottom:0}
-.arrows button{
-  width:40px;height:40px;border-radius:50%;border:1px solid var(--line);
-  background:var(--card);color:var(--ink);font-size:20px;cursor:pointer;
-  transition:background .2s,border-color .2s
+.arrows{display:none}
+/* hide manual arrows — auto scroll now */
+.fc-mq-wrap{overflow:hidden;margin-top:32px;position:relative}
+.fc-mq-wrap::before,.fc-mq-wrap::after{
+  content:"";position:absolute;top:0;bottom:0;width:80px;z-index:2;pointer-events:none
 }
-.arrows button:hover{background:var(--soft);border-color:var(--brand)}
-.fs{display:flex;gap:14px;overflow-x:auto;scroll-snap-type:x mandatory;
-  padding-bottom:8px;scrollbar-width:none;-webkit-overflow-scrolling:touch}
-.fs::-webkit-scrollbar{display:none}
+.fc-mq-wrap::before{left:0;background:linear-gradient(to right,var(--bg),transparent)}
+.fc-mq-wrap::after{right:0;background:linear-gradient(to left,var(--bg),transparent)}
+.fc-mq-track{display:flex;gap:16px;width:max-content;animation:fcScroll 32s linear infinite}
+.fc-mq-wrap:hover .fc-mq-track{animation-play-state:paused}
+@keyframes fcScroll{to{transform:translateX(-50%)}}
 .ic{width:28px;height:28px;color:var(--brand);margin-bottom:12px}
 .fc{
-  flex:0 0 min(300px,80vw);scroll-snap-align:start;
+  flex:0 0 280px;
   background:var(--card);border:1px solid var(--line);border-radius:var(--radius);
-  padding:24px;border-top:3px solid var(--a);transition:transform .3s,box-shadow .3s,border-color .3s
-}
-@media(max-width:640px){
-  .fc{flex:0 0 85vw}
+  padding:24px;border-top:3px solid var(--a);
+  transition:transform .3s,box-shadow .3s,border-color .3s;
+  user-select:none
 }
 .fc .ic{color:var(--a)}
-.fc h3{font-size:19px;margin-bottom:8px}
-.fc p{margin:0;color:var(--mute);font-size:14px}
+.fc h3{font-size:18px;margin-bottom:8px}
+.fc p{margin:0;color:var(--mute);font-size:14px;line-height:1.55}
 .fc:hover{transform:translateY(-5px);box-shadow:0 18px 36px -20px rgba(29,78,216,.45)}
 .fc:nth-child(6n+1){--a:var(--c1)}.fc:nth-child(6n+2){--a:var(--c3)}.fc:nth-child(6n+3){--a:var(--c2)}
 .fc:nth-child(6n+4){--a:var(--c4)}.fc:nth-child(6n+5){--a:var(--c5)}.fc:nth-child(6n){--a:var(--c1)}
@@ -262,8 +386,15 @@ header.sc{box-shadow:0 8px 24px -18px rgba(15,27,51,.5)}
 #about .card:nth-child(1){--a:var(--c3)}
 #about .card:nth-child(2){--a:var(--c2)}
 #about .card:nth-child(3){--a:var(--c4)}
+/* 2-col: last odd item centred */
+@media(max-width:960px) and (min-width:761px){
+  .three{grid-template-columns:repeat(2,1fr)}
+  .three>*:last-child:nth-child(odd){
+    grid-column:1/-1;max-width:calc(50% - 9px);margin-inline:auto
+  }
+}
+/* 1-col mobile */
 @media(max-width:760px){.three{grid-template-columns:1fr}}
-@media(max-width:960px) and (min-width:761px){.three{grid-template-columns:repeat(2,1fr)}}
 
 /* ── Plans / Pricing Cards ─────────────────── */
 .plans .card.hot{background:var(--brand);color:var(--brand-ink);border-color:var(--brand)}
@@ -322,7 +453,93 @@ header.sc{box-shadow:0 8px 24px -18px rgba(15,27,51,.5)}
   font:600 15px var(--f);border:1.5px solid transparent;cursor:pointer;
   transition:transform .25s,box-shadow .25s,background .2s;margin-top:auto}
 .plan-btn:hover{transform:translateY(-2px)}
-@media(max-width:860px){.plan-standard{transform:scale(1)}}
+/* 2-col at tablet: last plan centred */
+@media(max-width:860px){
+  .plan-standard{transform:scale(1)}
+  .plans .three{grid-template-columns:repeat(2,1fr)}
+  .plans .three>*:last-child:nth-child(odd){
+    grid-column:1/-1;max-width:calc(50% - 9px);margin-inline:auto
+  }
+}
+@media(max-width:600px){
+  .plans .three{grid-template-columns:1fr}
+  .plans .three>*:last-child{grid-column:auto;max-width:100%;margin-inline:0}
+}
+
+/* ── Pricing Accordion (mobile) ────────────── */
+.plan-accordion{display:none}
+@media(max-width:760px){
+  /* Hide normal 3-col grid */
+  .plans-desktop{display:none}
+  /* Show accordion */
+  .plan-accordion{display:block}
+  .pac-item{
+    border-radius:14px;overflow:hidden;margin-bottom:12px;
+    border:1.5px solid var(--line);background:var(--bg);
+  }
+  .pac-item.pac-basic{border-color:#B2EBE4}
+  .pac-item.pac-standard{border-color:#6366F1;background:linear-gradient(145deg,#312E81,#4338CA,#4F46E5);color:#fff}
+  .pac-item.pac-premium{border-color:#FED7AA}
+  .pac-header{
+    display:flex;align-items:center;justify-content:space-between;
+    padding:18px 20px;cursor:pointer;gap:12px;
+    -webkit-tap-highlight-color:transparent;user-select:none
+  }
+  .pac-header-left{display:flex;align-items:center;gap:12px}
+  .pac-badge{font-size:10px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;
+    padding:3px 10px;border-radius:99px}
+  .pac-basic .pac-badge{background:#CCFBF1;color:#0D9488}
+  .pac-standard .pac-badge{background:rgba(255,255,255,.18);color:#fff;border:1px solid rgba(255,255,255,.3)}
+  .pac-premium .pac-badge{background:#FFEDD5;color:#F97316}
+  .pac-title{font-size:18px;font-weight:700}
+  .pac-basic .pac-title{color:#0F4340}
+  .pac-standard .pac-title{color:#fff}
+  .pac-premium .pac-title{color:#7C2D12}
+  .pac-arrow{
+    width:28px;height:28px;border-radius:50%;
+    display:grid;place-items:center;flex-shrink:0;
+    transition:transform .3s;
+    background:rgba(0,0,0,.06)
+  }
+  .pac-standard .pac-arrow{background:rgba(255,255,255,.15)}
+  .pac-item.open .pac-arrow{transform:rotate(180deg)}
+  .pac-body{
+    max-height:0;overflow:hidden;
+    transition:max-height .4s cubic-bezier(.4,0,.2,1),padding .3s
+  }
+  .pac-item.open .pac-body{max-height:600px}
+  .pac-inner{padding:0 20px 20px}
+  .pac-sub{font-size:13px;margin-bottom:12px}
+  .pac-basic .pac-sub{color:#4B7775}
+  .pac-standard .pac-sub{color:#C7D2FE}
+  .pac-premium .pac-sub{color:#92400E}
+  .pac-list{list-style:none;font-size:14px;margin:0 0 16px}
+  .pac-list li{
+    display:flex;justify-content:space-between;align-items:center;
+    padding:9px 0;
+    border-top:1px dashed rgba(0,0,0,.1)
+  }
+  .pac-standard .pac-list li{border-top-color:rgba(255,255,255,.12);color:#E0E7FF}
+  .pac-basic .pac-list li{color:#2D6663}
+  .pac-premium .pac-list li{color:#78350F}
+  .pac-list li b{font-weight:700}
+  .pac-basic .pac-list li b{color:#0F4340}
+  .pac-standard .pac-list li b{color:#fff}
+  .pac-premium .pac-list li b{color:#7C2D12}
+  .pac-ck{width:18px;height:18px;border-radius:50%;display:grid;place-items:center;flex-shrink:0}
+  .pac-basic .pac-ck{background:#d1fae5;color:#059669}
+  .pac-standard .pac-ck{background:rgba(255,255,255,.2);color:#fff}
+  .pac-premium .pac-ck{background:#FFEDD5;color:#F97316}
+  .pac-btn{
+    display:block;width:100%;padding:13px;border-radius:10px;
+    text-align:center;font:600 15px var(--f);border:none;cursor:pointer;
+    transition:opacity .2s
+  }
+  .pac-btn:active{opacity:.8}
+  .pac-basic .pac-btn{background:#0D9488;color:#fff}
+  .pac-standard .pac-btn{background:#fff;color:#4338CA;font-weight:700}
+  .pac-premium .pac-btn{background:#F97316;color:#fff}
+}
 /* Comparison table */
 .tw{overflow-x:auto;border:1px solid var(--line);border-radius:16px;background:var(--bg)}
 table{border-collapse:collapse;width:100%;min-width:520px;font-size:14px}
@@ -348,8 +565,8 @@ td:nth-child(2){color:var(--c3)}td:nth-child(3){color:var(--c1)}td:nth-child(4){
 .ms b{display:block;font:700 38px/1 var(--f);color:#ffd166;margin-bottom:4px}
 .ms div{font-size:14px;color:#ffffffcc}
 .ms small{display:block;font-size:12px;opacity:.7;margin-top:2px}
-@media(max-width:760px){.ms{grid-template-columns:repeat(2,1fr)}.band{padding:32px 20px}}
-@media(max-width:420px){.ms{grid-template-columns:1fr}}
+@media(max-width:860px){.ms{grid-template-columns:repeat(2,1fr)}.band{padding:32px 20px}}
+@media(max-width:420px){.ms{grid-template-columns:1fr}.ms b{font-size:30px}}
 
 /* ── Team ──────────────────────────────────── */
 .tms{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;text-align:center;max-width:860px;margin-inline:auto}
@@ -364,7 +581,15 @@ td:nth-child(2){color:var(--c3)}td:nth-child(3){color:var(--c1)}td:nth-child(4){
 .av{width:76px;height:76px;border-radius:50%;margin:auto;display:grid;place-items:center;
   font:700 28px var(--f);background:color-mix(in srgb,var(--a,var(--brand)) 14%,var(--bg));
   color:var(--a,var(--brand))}
-@media(max-width:860px){.tms{grid-template-columns:repeat(2,1fr)}}
+/* Tablet: 2-col, 3rd card centred below at same card size */
+@media(max-width:860px){
+  .tms{grid-template-columns:repeat(2,1fr)}
+  .tms>*:last-child:nth-child(odd){
+    grid-column:1/-1;
+    width:calc(50% - 8px);
+    margin-inline:auto;
+  }
+}
 @media(max-width:420px){.tms{grid-template-columns:1fr}}
 
 /* ── Press logos ───────────────────────────── */
@@ -390,7 +615,8 @@ form.lead{display:grid;gap:10px}
 
 /* ── Footer ────────────────────────────────── */
 footer{padding:48px 0 36px;font-size:14px;color:var(--mute)}
-footer .wrap{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:40px}
+footer .wrap{display:grid;grid-template-columns:1.4fr 2fr;gap:40px}
+.footer-bottom-cols{display:grid;grid-template-columns:1fr 1fr;gap:32px;align-items:center}
 footer h5{margin:0 0 10px;color:var(--ink);font-size:14px;font-weight:600}
 footer a{display:block;padding:3px 0;transition:color .2s}
 footer a:hover{color:var(--brand)}
@@ -407,7 +633,24 @@ footer a:hover{color:var(--brand)}
   font-size:13px;color:var(--mute);text-align:center
 }
 @media(max-width:760px){
-  footer .wrap{grid-template-columns:1fr;gap:28px}
+  footer .wrap{grid-template-columns:1fr;gap:32px;text-align:center}
+  .foot-brand p{max-width:320px;margin-inline:auto}
+  .soc{justify-content:center}
+  footer h5{text-align:center}
+  footer a{text-align:center}
+
+  /* Two-col: Quick Links | Legal + Get in touch */
+  .footer-bottom-cols{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:24px;
+    text-align:left;
+  }
+  .footer-bottom-cols h5{text-align:left}
+  .footer-bottom-cols a{text-align:left}
+
+  .foot-copy{display:flex;flex-direction:column;gap:6px;align-items:center}
+  .foot-copy span[style]{display:none}
 }
 
 /* ── Scroll reveal ─────────────────────────── */
@@ -426,6 +669,7 @@ footer a:hover{color:var(--brand)}
 @media(prefers-reduced-motion:reduce){
   *{animation:none!important;transition:none!important}
   .js .rv{opacity:1;transform:none}
+  .fc-mq-track,.feat-mq-track,.mt{animation:none!important}
 }
 
 /* ── Utility ───────────────────────────────── */
@@ -439,10 +683,8 @@ footer a:hover{color:var(--brand)}
 /* ── Tablet landscape (≤1024px) ────────────── */
 @media(max-width:1024px){
   .hero{grid-template-columns:1fr 1fr;gap:24px}
-  .sys{width:360px;height:360px}
-  .orb{min-height:360px}
-  .three{grid-template-columns:repeat(2,1fr)}
-  .tms{grid-template-columns:repeat(2,1fr)}
+  .sys{width:340px;height:340px}
+  .orb{min-height:340px}
 }
 
 /* ── Tablet portrait (≤860px) ──────────────── */
@@ -456,11 +698,8 @@ footer a:hover{color:var(--brand)}
   .ob-static{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:24px}
   .ob-static .ob-card{position:static;width:100%}
   .plan-standard{transform:scale(1)}
-  .tms{grid-template-columns:repeat(2,1fr)}
   .hrow{flex-direction:column;align-items:flex-start}
-  .arrows{margin-bottom:16px}
-  .fc{flex:0 0 min(280px,80vw)}
-  .band{padding:28px 20px}
+  .cta{grid-template-columns:1fr;padding:32px 24px}
 }
 
 /* ── Mobile large (≤640px) ─────────────────── */
@@ -468,54 +707,50 @@ footer a:hover{color:var(--brand)}
   .hero h1{font-size:clamp(28px,8vw,42px)}
   .hero p{font-size:15px}
   .ob-static{grid-template-columns:repeat(2,1fr)}
-  .three{grid-template-columns:1fr}
-  .tms{grid-template-columns:repeat(2,1fr)}
+  .ob-static .ob-card:last-child:nth-child(odd){
+    grid-column:1/-1;
+    max-width:calc(50% - 6px);
+    margin-inline:auto;
+  }
   .cta{padding:28px 18px}
   .cta h2{font-size:clamp(22px,6vw,32px)}
   .wrap{padding:0 16px}
   section{padding:52px 0}
   section.tight{padding:40px 0}
   .head{margin-bottom:28px}
-  /* Feature cards full width on small mobile */
-  .fc{flex:0 0 min(260px,85vw)}
-  /* Comparison table simpler on small screens */
-  .tw table{font-size:12px}
-  .tw th,.tw td{padding:10px 10px}
-  /* Pricing card buttons */
   .plan-btn{font-size:14px;padding:12px}
-  /* Nav */
   .nav{height:60px}
-  .logo{font-size:18px}
+  .logo img{height:30px}
 }
 
 /* ── Mobile small (≤480px) ─────────────────── */
 @media(max-width:480px){
   .ob-static{grid-template-columns:1fr}
-  .tms{grid-template-columns:1fr}
   .hs{gap:18px}
   .hs b{font-size:22px}
   .row{flex-direction:column;align-items:stretch}
   .row .btn{text-align:center;justify-content:center}
-  .ms{grid-template-columns:repeat(2,1fr)}
-  footer .wrap{gap:22px}
   .cta{padding:24px 16px}
   .head h2{font-size:clamp(22px,7vw,32px)}
-  /* Comparison table scroll hint */
-  .tw::before{content:"← Scroll to compare →";display:block;
-    text-align:center;font-size:12px;color:var(--mute);padding:8px;
-    border-bottom:1px solid var(--line)}
+  .plan-standard{transform:scale(1)}
+  .fmi{font-size:13px;padding:9px 18px}
 }
 
 /* ── Mobile XS (≤360px) ────────────────────── */
 @media(max-width:360px){
   .wrap{padding:0 12px}
   .btn{padding:11px 16px;font-size:14px}
-  .hero h1{font-size:26px}
-  .logo{font-size:16px}
+  .hero h1{font-size:24px}
+  .logo img{height:26px}
   .ob-card h4{font-size:12px}
   .ob-card p{font-size:11px}
   .nav{height:56px}
 }
+
+/* ── Prevent horizontal overflow everywhere ─── */
+html,body{max-width:100%;overflow-x:hidden}
+img,svg,video{max-width:100%;height:auto}
+.fc-mq-wrap,.feat-mq-wrap,.mq{overflow:hidden}
 
 /* ── Touch targets ──────────────────────────── */
 @media(hover:none){
@@ -532,8 +767,7 @@ footer a:hover{color:var(--brand)}
 <header id="hdr">
   <div class="wrap nav">
     <a href="#" class="logo">
-      <img src="logo-icon.jpeg" alt="Veducore logo" style="width:36px;height:36px;border-radius:50%;object-fit:contain;padding:4px;background:#f0f4ff">
-      Veducore
+      <img src="image.png" alt="Veducore logo" style="height:36px;width:auto;object-fit:contain;display:block">
     </a>
 
     <!-- Desktop nav -->
@@ -541,7 +775,6 @@ footer a:hover{color:var(--brand)}
       <ul class="nav-links">
         <li><a href="#">Home</a></li>
         <li><a href="#about">About</a></li>
-        <li><a href="#">Blog</a></li>
         <li><a href="#plans">Packages</a></li>
         <li><a href="#contact">Contact</a></li>
       </ul>
@@ -557,12 +790,21 @@ footer a:hover{color:var(--brand)}
 
   <!-- Mobile drawer -->
   <nav class="mob-nav" id="mobNav" aria-label="Mobile navigation">
-    <a href="#" onclick="closeMob()">Home</a>
-    <a href="#about" onclick="closeMob()">About</a>
-    <a href="#" onclick="closeMob()">Blog</a>
-    <a href="#plans" onclick="closeMob()">Packages</a>
-    <a href="#contact" onclick="closeMob()">Contact</a>
-    <a href="#contact" class="btn" onclick="closeMob()">Book a demo</a>
+    <div class="mob-nav-bar">
+      <a href="#" class="logo" onclick="closeMob()">
+        <img src="image.png" alt="Veducore logo" style="height:32px;width:auto;object-fit:contain;display:block">
+      </a>
+      <button class="mob-nav-close" aria-label="Close menu" onclick="closeMob()">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+      </button>
+    </div>
+    <div class="mob-nav-links">
+      <a href="#" onclick="closeMob()">Home</a>
+      <a href="#about" onclick="closeMob()">About</a>
+      <a href="#plans" onclick="closeMob()">Packages</a>
+      <a href="#contact" onclick="closeMob()">Contact</a>
+      <a href="#contact" class="btn" onclick="closeMob()" style="margin-top:32px;padding:15px 48px;font-size:16px;border-radius:14px;">Book a demo</a>
+    </div>
   </nav>
 </header>
 
@@ -615,8 +857,7 @@ footer a:hover{color:var(--brand)}
       <div class="ring3"></div>
       <div class="orb-glow"></div>
       <div class="orb-core">
-        <img src="logo-icon.jpeg" alt="Veducore" style="width:72px;height:72px;border-radius:50%;object-fit:contain;padding:8px;background:#f0f4ff;display:block;margin:0 auto 4px">
-        <small>School OS</small>
+        <img src="image.png" alt="Veducore" style="width:80px;height:auto;object-fit:contain;display:block;margin:0 auto">
       </div>
       <!-- ERP -->
       <div class="ob-card ob-erp">
@@ -652,10 +893,20 @@ footer a:hover{color:var(--brand)}
       <p>Fulfil the needs of current students and attract new ones.</p>
     </div>
     <div class="tour rv">
-      <button class="play" aria-label="Play product tour">
-        <svg viewBox="0 0 24 24" width="28" height="28" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
-      </button>
-      <span>Product Tour · Tap to play full video</span>
+      <!-- Video will be added later -->
+      <div style="display:flex;flex-direction:column;align-items:center;gap:18px;color:#fff">
+        <div style="width:90px;height:90px;border-radius:50%;background:rgba(255,255,255,.15);border:2px solid rgba(255,255,255,.35);display:grid;place-items:center;animation:pulse 2s infinite">
+          <svg width="44" height="44" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="2" y="3" width="20" height="14" rx="2.5"/>
+            <path d="M8 21h8M12 17v4"/>
+            <polygon points="10 8 16 11 10 14 10 8" fill="#fff" stroke="none"/>
+          </svg>
+        </div>
+        <div style="text-align:center">
+          <p style="font-size:16px;font-weight:600;margin:0;opacity:1">Product Demo Video</p>
+          <p style="font-size:13px;opacity:.7;margin:4px 0 0">Coming soon · Full walkthrough of the platform</p>
+        </div>
+      </div>
     </div>
   </div>
 </section>
@@ -669,19 +920,44 @@ footer a:hover{color:var(--brand)}
         <h2>Advanced features for next-level learning.</h2>
         <p>Scalable tools to empower educators, engage students and grow your institute.</p>
       </div>
-      <div class="arrows rv">
-        <button onclick="sl(-1)" aria-label="Previous">‹</button>
-        <button onclick="sl(1)" aria-label="Next">›</button>
-      </div>
     </div>
-    <div class="fs rv" id="fs">
+  </div>
+  <!-- full-bleed marquee outside wrap so it goes edge-to-edge -->
+  <div class="fc-mq-wrap rv">
+    <div class="fc-mq-track">
+      <!-- set 1 -->
       <article class="fc">
         <svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="13" rx="2"/><path d="M8 21h8M12 17v4"/></svg>
         <h3>100% White Label</h3><p>Your own branded mobile app and website with the LMS built in.</p>
       </article>
       <article class="fc">
         <svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="6" width="13" height="12" rx="2"/><path d="m16 10 5-3v10l-5-3"/></svg>
-        <h3>Live Classes / Video on Demand</h3><p>Teach live or share recorded lectures with quizzes and assignments.</p>
+        <h3>Live Classes &amp; Video on Demand</h3><p>Teach live or share recorded lectures with quizzes and assignments.</p>
+      </article>
+      <article class="fc">
+        <svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3 4 6v6c0 5 3.5 8 8 9 4.5-1 8-4 8-9V6z"/><path d="m9 12 2 2 4-4"/></svg>
+        <h3>Online Exam Proctoring</h3><p>Run cheat-resistant exams with AI-based proctoring that monitors every attempt.</p>
+      </article>
+      <article class="fc">
+        <svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M4 20V10M10 20V4M16 20v-7M22 20H2"/></svg>
+        <h3>Detailed Student Reporting</h3><p>Track registrations, courses created and courses sold to understand your growth.</p>
+      </article>
+      <article class="fc">
+        <svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="8" r="3.5"/><path d="M2 20c0-4 3-6 7-6s7 2 7 6M17 5l2 2 3-3"/></svg>
+        <h3>Integrated Leads Management</h3><p>Collect leads from ads and listing sites, assign them and follow up on time.</p>
+      </article>
+      <article class="fc">
+        <svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4.4 3.6-7 8-7s8 2.6 8 7"/></svg>
+        <h3>Dedicated Account Manager</h3><p>A named manager guides your onboarding, data migration and staff training.</p>
+      </article>
+      <!-- set 2 — duplicate for seamless loop -->
+      <article class="fc">
+        <svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="13" rx="2"/><path d="M8 21h8M12 17v4"/></svg>
+        <h3>100% White Label</h3><p>Your own branded mobile app and website with the LMS built in.</p>
+      </article>
+      <article class="fc">
+        <svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="6" width="13" height="12" rx="2"/><path d="m16 10 5-3v10l-5-3"/></svg>
+        <h3>Live Classes &amp; Video on Demand</h3><p>Teach live or share recorded lectures with quizzes and assignments.</p>
       </article>
       <article class="fc">
         <svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3 4 6v6c0 5 3.5 8 8 9 4.5-1 8-4 8-9V6z"/><path d="m9 12 2 2 4-4"/></svg>
@@ -712,7 +988,8 @@ footer a:hover{color:var(--brand)}
       <p>Choose the perfect plan for your educational needs.</p>
     </div>
 
-    <div class="three">
+    <!-- ── Desktop: 3-col grid (hidden on mobile) ── -->
+    <div class="three plans-desktop">
       <!-- Basic -->
       <div class="card pl plan-basic rv">
         <span class="plan-tag">Starter</span>
@@ -730,8 +1007,7 @@ footer a:hover{color:var(--brand)}
         </ul>
         <a href="#contact" class="plan-btn">Book Your Demo</a>
       </div>
-
-      <!-- Standard (hot) -->
+      <!-- Standard -->
       <div class="card pl plan-standard rv">
         <span class="plan-tag">⭐ Most Popular</span>
         <h3>Standard</h3><p>For growing institutes</p>
@@ -748,7 +1024,6 @@ footer a:hover{color:var(--brand)}
         </ul>
         <a href="#contact" class="plan-btn">Book Your Demo</a>
       </div>
-
       <!-- Premium -->
       <div class="card pl plan-premium rv">
         <span class="plan-tag">🏆 Premium</span>
@@ -768,41 +1043,150 @@ footer a:hover{color:var(--brand)}
       </div>
     </div>
 
-    <h3 style="margin:52px 0 20px;font-size:24px" class="rv">Compare all features</h3>
-    <div class="tw rv">
-      <table class="cmp-table">
-        <thead>
-          <tr>
-            <th class="feat-col">Features</th>
-            <th style="color:#f59e0b">Basic</th>
-            <th style="color:#2563eb">Standard</th>
-            <th style="color:#0d9488">Premium</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr><td>Mobile App</td><td><span class="tick">✓</span></td><td><span class="tick">✓</span></td><td><span class="tick">✓</span></td></tr>
-          <tr><td>Web based Admin &amp; Faculty Panel</td><td><span class="tick">✓</span></td><td><span class="tick">✓</span></td><td><span class="tick">✓</span></td></tr>
-          <tr><td>Website</td><td><span class="cross">✕</span></td><td><span class="cross">✕</span></td><td><span class="tick">✓</span></td></tr>
-          <tr><td>Students Enrollment Limit</td><td>&lt; 50</td><td>50–1000</td><td>1000+</td></tr>
-          <tr><td>Live Class</td><td><span class="tick">✓</span></td><td><span class="tick">✓</span></td><td><span class="tick">✓</span></td></tr>
-          <tr><td>Video on Demand</td><td><span class="tick">✓</span></td><td><span class="tick">✓</span></td><td><span class="tick">✓</span></td></tr>
-          <tr><td>Online Test</td><td><span class="tick">✓</span></td><td><span class="tick">✓</span></td><td><span class="tick">✓</span></td></tr>
-          <tr><td>Assignment / Quiz</td><td><span class="tick">✓</span></td><td><span class="tick">✓</span></td><td><span class="tick">✓</span></td></tr>
-          <tr><td>Doubt Forum</td><td><span class="tick">✓</span></td><td><span class="tick">✓</span></td><td><span class="tick">✓</span></td></tr>
-          <tr><td>Blog / Articles</td><td><span class="cross">✕</span></td><td><span class="tick">✓</span></td><td><span class="tick">✓</span></td></tr>
-          <tr><td>Complete ERP Package</td><td><span class="cross">✕</span></td><td><span class="cross">✕</span></td><td><span class="tick">✓</span></td></tr>
-          <tr><td>24×7 Customer Support</td><td><span class="cross">✕</span></td><td><span class="tick">✓</span></td><td><span class="tick">✓</span></td></tr>
-          <tr class="cmp-btn-row">
-            <td></td>
-            <td><a href="#contact" class="btn cmp-btn" style="background:#f59e0b;border-color:#f59e0b;color:#fff">Book Your Demo</a></td>
-            <td><a href="#contact" class="btn cmp-btn" style="background:#2563eb;border-color:#2563eb;color:#fff">Book Your Demo</a></td>
-            <td><a href="#contact" class="btn cmp-btn" style="background:#0d9488;border-color:#0d9488;color:#fff">Book Your Demo</a></td>
-          </tr>
-        </tbody>
-      </table>
+    <!-- ── Mobile: Accordion (hidden on desktop) ── -->
+    <div class="plan-accordion">
+
+      <!-- Basic -->
+      <div class="pac-item pac-basic" id="pac-basic">
+        <div class="pac-header" onclick="togglePac('pac-basic')">
+          <div class="pac-header-left">
+            <span class="pac-badge">Starter</span>
+            <span class="pac-title">Basic</span>
+          </div>
+          <div class="pac-arrow">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#0F4340" stroke-width="2.5" stroke-linecap="round"><polyline points="6 9 12 15 18 9"/></svg>
+          </div>
+        </div>
+        <div class="pac-body">
+          <div class="pac-inner">
+            <p class="pac-sub">For tutors and new academies</p>
+            <ul class="pac-list">
+              <li><span>Students enrolment limit</span><b>&lt; 50</b></li>
+              <li><span>Mobile App</span><span class="pac-ck"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><path d="m5 12 5 5 9-10"/></svg></span></li>
+              <li><span>Admin &amp; Faculty Panel</span><span class="pac-ck"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><path d="m5 12 5 5 9-10"/></svg></span></li>
+              <li><span>Website</span><span class="pac-ck"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><path d="m5 12 5 5 9-10"/></svg></span></li>
+              <li><span>Live Class</span><span class="pac-ck"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><path d="m5 12 5 5 9-10"/></svg></span></li>
+              <li><span>Video on Demand</span><span class="pac-ck"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><path d="m5 12 5 5 9-10"/></svg></span></li>
+              <li><span>Online Test</span><span class="pac-ck"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><path d="m5 12 5 5 9-10"/></svg></span></li>
+              <li><span>Complete ERP Package</span><span class="pac-ck"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><path d="m5 12 5 5 9-10"/></svg></span></li>
+              <li><span>24x7 Support</span><span class="pac-ck"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><path d="m5 12 5 5 9-10"/></svg></span></li>
+            </ul>
+            <a href="#contact" class="pac-btn">Book Your Demo</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Standard -->
+      <div class="pac-item pac-standard open" id="pac-standard">
+        <div class="pac-header" onclick="togglePac('pac-standard')">
+          <div class="pac-header-left">
+            <span class="pac-badge">⭐ Most Popular</span>
+            <span class="pac-title">Standard</span>
+          </div>
+          <div class="pac-arrow">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.5" stroke-linecap="round"><polyline points="6 9 12 15 18 9"/></svg>
+          </div>
+        </div>
+        <div class="pac-body">
+          <div class="pac-inner">
+            <p class="pac-sub">For growing institutes</p>
+            <ul class="pac-list">
+              <li><span>Students enrolment limit</span><b>50 – 1000</b></li>
+              <li><span>Mobile App</span><span class="pac-ck"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><path d="m5 12 5 5 9-10"/></svg></span></li>
+              <li><span>Admin &amp; Faculty Panel</span><span class="pac-ck"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><path d="m5 12 5 5 9-10"/></svg></span></li>
+              <li><span>Website</span><span class="pac-ck"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><path d="m5 12 5 5 9-10"/></svg></span></li>
+              <li><span>Live Class</span><span class="pac-ck"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><path d="m5 12 5 5 9-10"/></svg></span></li>
+              <li><span>Video on Demand</span><span class="pac-ck"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><path d="m5 12 5 5 9-10"/></svg></span></li>
+              <li><span>Online Test</span><span class="pac-ck"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><path d="m5 12 5 5 9-10"/></svg></span></li>
+              <li><span>Complete ERP Package</span><span class="pac-ck"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><path d="m5 12 5 5 9-10"/></svg></span></li>
+              <li><span>24x7 Support</span><span class="pac-ck"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><path d="m5 12 5 5 9-10"/></svg></span></li>
+            </ul>
+            <a href="#contact" class="pac-btn">Book Your Demo</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Premium -->
+      <div class="pac-item pac-premium" id="pac-premium">
+        <div class="pac-header" onclick="togglePac('pac-premium')">
+          <div class="pac-header-left">
+            <span class="pac-badge">🏆 Premium</span>
+            <span class="pac-title">Premium</span>
+          </div>
+          <div class="pac-arrow">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#7C2D12" stroke-width="2.5" stroke-linecap="round"><polyline points="6 9 12 15 18 9"/></svg>
+          </div>
+        </div>
+        <div class="pac-body">
+          <div class="pac-inner">
+            <p class="pac-sub">For large schools &amp; colleges</p>
+            <ul class="pac-list">
+              <li><span>Students enrolment limit</span><b>1000+</b></li>
+              <li><span>Mobile App</span><span class="pac-ck"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><path d="m5 12 5 5 9-10"/></svg></span></li>
+              <li><span>Admin &amp; Faculty Panel</span><span class="pac-ck"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><path d="m5 12 5 5 9-10"/></svg></span></li>
+              <li><span>Website</span><span class="pac-ck"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><path d="m5 12 5 5 9-10"/></svg></span></li>
+              <li><span>Live Class</span><span class="pac-ck"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><path d="m5 12 5 5 9-10"/></svg></span></li>
+              <li><span>Video on Demand</span><span class="pac-ck"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><path d="m5 12 5 5 9-10"/></svg></span></li>
+              <li><span>Online Test</span><span class="pac-ck"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><path d="m5 12 5 5 9-10"/></svg></span></li>
+              <li><span>Complete ERP Package</span><span class="pac-ck"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><path d="m5 12 5 5 9-10"/></svg></span></li>
+              <li><span>24x7 Support</span><span class="pac-ck"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><path d="m5 12 5 5 9-10"/></svg></span></li>
+            </ul>
+            <a href="#contact" class="pac-btn">Book Your Demo</a>
+          </div>
+        </div>
+      </div>
+
     </div>
   </div>
 </section>
+
+<!-- ══ FEATURE MARQUEE ════════════════════════════════════════ -->
+<div class="feat-mq-wrap">
+  <!-- Row 1 — forward -->
+  <div class="feat-mq-track fwd">
+    <span class="fmi"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#1d4ed8" stroke-width="2" stroke-linecap="round"><rect x="3" y="4" width="18" height="13" rx="2"/><path d="M8 21h8M12 17v4"/></svg>100% White Label</span>
+    <span class="fmi"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#0d9488" stroke-width="2" stroke-linecap="round"><rect x="3" y="6" width="13" height="12" rx="2"/><path d="m16 10 5-3v10l-5-3"/></svg>Live Classes</span>
+    <span class="fmi"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#e11d6a" stroke-width="2" stroke-linecap="round"><path d="M12 3 4 6v6c0 5 3.5 8 8 9 4.5-1 8-4 8-9V6z"/></svg>AI Proctoring</span>
+    <span class="fmi"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#f59e0b" stroke-width="2" stroke-linecap="round"><path d="M4 20V10M10 20V4M16 20v-7M22 20H2"/></svg>Student Analytics</span>
+    <span class="fmi"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#6366f1" stroke-width="2" stroke-linecap="round"><circle cx="9" cy="8" r="3.5"/><path d="M2 20c0-4 3-6 7-6s7 2 7 6M17 5l2 2 3-3"/></svg>Lead Management</span>
+    <span class="fmi"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#ff6b35" stroke-width="2" stroke-linecap="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>Video on Demand</span>
+    <span class="fmi"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#1d4ed8" stroke-width="2" stroke-linecap="round"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a2 2 0 0 0-4 0v2M8 7V5a2 2 0 0 0-4 0v2"/></svg>Complete ERP</span>
+    <span class="fmi"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#0d9488" stroke-width="2" stroke-linecap="round"><polyline points="22 7 13.5 15.5 8.5 10.5 2 17"/></svg>Growth Tools</span>
+    <span class="fmi"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#6366f1" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4.4 3.6-7 8-7s8 2.6 8 7"/></svg>Dedicated Support</span>
+    <!-- duplicate for seamless loop -->
+    <span class="fmi"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#1d4ed8" stroke-width="2" stroke-linecap="round"><rect x="3" y="4" width="18" height="13" rx="2"/><path d="M8 21h8M12 17v4"/></svg>100% White Label</span>
+    <span class="fmi"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#0d9488" stroke-width="2" stroke-linecap="round"><rect x="3" y="6" width="13" height="12" rx="2"/><path d="m16 10 5-3v10l-5-3"/></svg>Live Classes</span>
+    <span class="fmi"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#e11d6a" stroke-width="2" stroke-linecap="round"><path d="M12 3 4 6v6c0 5 3.5 8 8 9 4.5-1 8-4 8-9V6z"/></svg>AI Proctoring</span>
+    <span class="fmi"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#f59e0b" stroke-width="2" stroke-linecap="round"><path d="M4 20V10M10 20V4M16 20v-7M22 20H2"/></svg>Student Analytics</span>
+    <span class="fmi"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#6366f1" stroke-width="2" stroke-linecap="round"><circle cx="9" cy="8" r="3.5"/><path d="M2 20c0-4 3-6 7-6s7 2 7 6M17 5l2 2 3-3"/></svg>Lead Management</span>
+    <span class="fmi"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#ff6b35" stroke-width="2" stroke-linecap="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>Video on Demand</span>
+    <span class="fmi"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#1d4ed8" stroke-width="2" stroke-linecap="round"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a2 2 0 0 0-4 0v2M8 7V5a2 2 0 0 0-4 0v2"/></svg>Complete ERP</span>
+    <span class="fmi"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#0d9488" stroke-width="2" stroke-linecap="round"><polyline points="22 7 13.5 15.5 8.5 10.5 2 17"/></svg>Growth Tools</span>
+    <span class="fmi"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#6366f1" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4.4 3.6-7 8-7s8 2.6 8 7"/></svg>Dedicated Support</span>
+  </div>
+  <!-- Row 2 — reverse -->
+  <div class="feat-mq-track rev" style="margin-top:12px">
+    <span class="fmi"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#e11d6a" stroke-width="2" stroke-linecap="round"><rect x="5" y="2" width="14" height="20" rx="2"/><path d="M12 18h.01"/></svg>Mobile App</span>
+    <span class="fmi"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#1d4ed8" stroke-width="2" stroke-linecap="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>Secure Platform</span>
+    <span class="fmi"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#f59e0b" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>24×7 Support</span>
+    <span class="fmi"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#0d9488" stroke-width="2" stroke-linecap="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg>Admin Panel</span>
+    <span class="fmi"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#6366f1" stroke-width="2" stroke-linecap="round"><polyline points="9 11 12 14 22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>Online Tests</span>
+    <span class="fmi"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#ff6b35" stroke-width="2" stroke-linecap="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>Doubt Forum</span>
+    <span class="fmi"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#1d4ed8" stroke-width="2" stroke-linecap="round"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg>Custom Branding</span>
+    <span class="fmi"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#0d9488" stroke-width="2" stroke-linecap="round"><line x1="12" y1="20" x2="12" y2="10"/><line x1="18" y1="20" x2="18" y2="4"/><line x1="6" y1="20" x2="6" y2="16"/></svg>Fee Management</span>
+    <span class="fmi"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#e11d6a" stroke-width="2" stroke-linecap="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></svg>Attendance</span>
+    <!-- duplicate for seamless loop -->
+    <span class="fmi"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#e11d6a" stroke-width="2" stroke-linecap="round"><rect x="5" y="2" width="14" height="20" rx="2"/><path d="M12 18h.01"/></svg>Mobile App</span>
+    <span class="fmi"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#1d4ed8" stroke-width="2" stroke-linecap="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>Secure Platform</span>
+    <span class="fmi"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#f59e0b" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>24×7 Support</span>
+    <span class="fmi"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#0d9488" stroke-width="2" stroke-linecap="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg>Admin Panel</span>
+    <span class="fmi"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#6366f1" stroke-width="2" stroke-linecap="round"><polyline points="9 11 12 14 22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>Online Tests</span>
+    <span class="fmi"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#ff6b35" stroke-width="2" stroke-linecap="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>Doubt Forum</span>
+    <span class="fmi"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#1d4ed8" stroke-width="2" stroke-linecap="round"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg>Custom Branding</span>
+    <span class="fmi"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#0d9488" stroke-width="2" stroke-linecap="round"><line x1="12" y1="20" x2="12" y2="10"/><line x1="18" y1="20" x2="18" y2="4"/><line x1="6" y1="20" x2="6" y2="16"/></svg>Fee Management</span>
+    <span class="fmi"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#e11d6a" stroke-width="2" stroke-linecap="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></svg>Attendance</span>
+  </div>
+</div>
 
 <!-- ══ ABOUT ═══════════════════════════════════════════════════ -->
 <section id="about" class="tight">
@@ -828,9 +1212,9 @@ footer a:hover{color:var(--brand)}
       <p>Meet the people behind Veducore.</p>
     </div>
     <div class="tms">
-      <div class="tm rv"><div class="av" style="background:none;overflow:hidden;padding:0"><img src="vikash.jpeg" alt="Vikash Dixit" style="width:100%;height:100%;object-fit:cover;border-radius:50%"></div><h3>Vikash Dixit</h3><p>Founder | Head – Technology</p><p style="font-size:11px;color:var(--brand);font-weight:600;margin-top:4px">VBSPU</p></div>
-      <div class="tm rv"><div class="av" style="background:none;overflow:hidden;padding:0"><img src="pawan.jpeg" alt="Pawan Singh" style="width:100%;height:100%;object-fit:cover;border-radius:50%"></div><h3>Pawan Singh</h3><p>Co-Founder | Head – Operations</p><p style="font-size:11px;color:var(--brand);font-weight:600;margin-top:4px">SRM DELHI</p></div>
-      <div class="tm rv"><div class="av" style="background:none;overflow:hidden;padding:0"><img src="aryan.jpeg" alt="Aryan Singh Thakur" style="width:100%;height:100%;object-fit:cover;border-radius:50%"></div><h3>Aryan Singh Thakur</h3><p>Head – Product Management</p><p style="font-size:11px;color:var(--brand);font-weight:600;margin-top:4px">SRM DELHI</p></div>
+      <div class="tm rv"><div class="av" style="background:none;overflow:hidden;padding:0"><img src="vikash.jpeg" alt="Vikash Dixit" style="width:100%;height:100%;object-fit:cover;border-radius:50%"></div><h3>Vikash Dixit</h3><p>Co-Founder &amp; CEO</p></div>
+      <div class="tm rv"><div class="av" style="background:none;overflow:hidden;padding:0"><img src="pawan.jpeg" alt="Pawan Singh" style="width:100%;height:100%;object-fit:cover;border-radius:50%"></div><h3>Pawan Singh</h3><p>Co-Founder &amp; COO</p></div>
+      <div class="tm rv"><div class="av" style="background:none;overflow:hidden;padding:0"><img src="aryan.jpeg" alt="Aryan Singh Thakur" style="width:100%;height:100%;object-fit:cover;border-radius:50%"></div><h3>Aryan Singh Thakur</h3><p>Co-Founder &amp; CTO</p></div>
     </div>
   </div>
 </section>
@@ -865,39 +1249,63 @@ footer a:hover{color:var(--brand)}
 <footer>
   <div class="wrap">
     <div class="foot-brand">
-      <a href="#" class="logo" style="margin-bottom:12px">
-        <img src="logo-icon.jpeg" alt="Veducore logo" style="width:36px;height:36px;border-radius:50%;object-fit:contain;padding:4px;background:#f0f4ff">
-        Veducore
+      <a href="#" class="logo" style="margin-bottom:14px">
+        <img src="image.png" alt="Veducore logo" style="height:36px;width:auto;object-fit:contain;display:block">
       </a>
-      <p>All-in-one school ERP, LMS and growth platform for principals, teachers and parents who want operations to feel calm, modern and connected.</p>
+      <p>All-in-one School OS — ERP, LMS and growth tools for institutes that want to operate with clarity, speed and confidence.</p>
       <div class="soc">
-        <a href="#" aria-label="Facebook">Fb</a>
-        <a href="#" aria-label="X / Twitter">X</a>
-        <a href="#" aria-label="LinkedIn">in</a>
-        <a href="#" aria-label="Instagram">Ig</a>
+        <a href="#" aria-label="Facebook" title="Facebook">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+        </a>
+        <a href="#" aria-label="X / Twitter" title="X">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+        </a>
+        <a href="#" aria-label="LinkedIn" title="LinkedIn">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6zM2 9h4v12H2z"/><circle cx="4" cy="4" r="2"/></svg>
+        </a>
+        <a href="#" aria-label="Instagram" title="Instagram">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+        </a>
+        <a href="https://wa.me/916388795644" aria-label="WhatsApp" title="WhatsApp">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12.003 0C5.376 0 0 5.373 0 11.998c0 2.117.554 4.1 1.522 5.823L.054 23.27a.75.75 0 0 0 .92.92l5.45-1.469A11.95 11.95 0 0 0 12.003 24C18.629 24 24 18.626 24 11.998 24 5.373 18.629 0 12.003 0zm0 21.998a9.948 9.948 0 0 1-5.071-1.383l-.364-.216-3.232.872.872-3.233-.216-.363A9.944 9.944 0 0 1 2.002 12C2.002 6.476 6.48 2 12.003 2s10 4.476 10 9.998c0 5.523-4.478 9.999-10 9.999z"/></svg>
+        </a>
       </div>
     </div>
-    <div>
-      <h5>Useful links</h5>
-      <a href="#">Home</a>
-      <a href="#about">About Us</a>
-      <a href="#">Blog</a>
-      <a href="#contact">Contact Us</a>
-      <a href="#">Privacy Policy</a>
-      <a href="#">Refund Policy</a>
-      <a href="#">Terms &amp; Conditions</a>
-    </div>
-    <div>
-      <h5>Get in touch</h5>
-      <p style="line-height:1.8;font-size:14px">
-        Your office address here<br>
-        <a href="tel:+916388795644">+91 63887 95644</a>
-        <a href="mailto:veducore@gmail.com">veducore@gmail.com</a>
-      </p>
+    <div class="footer-bottom-cols">
+      <div>
+        <h5>Quick Links</h5>
+        <a href="#">Home</a>
+        <a href="#about">About Us</a>
+        <a href="#features">Features</a>
+        <a href="#plans">Pricing</a>
+        <a href="#team">Team</a>
+        <a href="#contact">Contact Us</a>
+      </div>
+      <div>
+        <h5>Legal</h5>
+        <a href="privacy-policy.html">Privacy Policy</a>
+        <a href="refund-policy.html">Refund Policy</a>
+        <a href="terms.html">Terms &amp; Conditions</a>
+        <div style="margin-top:20px">
+          <h5>Get in touch</h5>
+          <p style="line-height:2;font-size:14px;margin:0">
+            <a href="tel:+916388795644" style="display:flex;align-items:center;gap:7px">
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 1.27h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.91a16 16 0 0 0 6.18 6.18l.97-.98a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 21.73 17z"/></svg>
+              +91 63887 95644
+            </a>
+            <a href="mailto:veducore@gmail.com" style="display:flex;align-items:center;gap:7px">
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+              veducore@gmail.com
+            </a>
+          </p>
+        </div>
+      </div>
     </div>
   </div>
   <div class="foot-copy">
-    © 2026 Veducore. All rights reserved. · Built with care for schools, by educators.
+    <span>© 2026 Veducore. All rights reserved.</span>
+    <span style="margin:0 10px;opacity:.4">·</span>
+    <span>Built with care for schools, by educators.</span>
   </div>
 </footer>
 
@@ -931,8 +1339,17 @@ hamBtn.addEventListener('click', function(){
   document.body.style.overflow = open ? 'hidden' : '';
 });
 
-// ── Feature slider ─────────────────────────────────────────────
-function sl(d){document.getElementById('fs').scrollBy({left:d*320,behavior:'smooth'})}
+// ── Feature slider — removed (auto-marquee now) ──────────────
+
+// ── Pricing accordion (mobile) ────────────────────────────────
+function togglePac(id){
+  var item = document.getElementById(id);
+  var isOpen = item.classList.contains('open');
+  // close all
+  document.querySelectorAll('.pac-item').forEach(function(el){el.classList.remove('open')});
+  // open clicked if it was closed
+  if(!isOpen) item.classList.add('open');
+}
 
 // ── Scroll reveal ──────────────────────────────────────────────
 document.documentElement.classList.add('js');
